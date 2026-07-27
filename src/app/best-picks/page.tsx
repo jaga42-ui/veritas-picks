@@ -57,16 +57,27 @@ export default async function WishlistPage() {
       </div>
 
       {/* WISHLIST GRID OF EDITORIAL PRODUCT CARDS */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-        {products.map((prod, idx) => (
-          <EditorialProductCard
-            key={prod.asin}
-            product={prod}
-            rank={idx + 1}
-            guideSlug={prod.guideSlug}
-          />
-        ))}
-      </div>
+      {products.length === 0 ? (
+        <div className="text-center py-16 px-4 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)]">
+          <p className="text-base font-editorial text-[var(--text-primary)]">
+            No products listed in our wishlists yet.
+          </p>
+          <p className="text-xs text-[var(--text-secondary)] mt-2">
+            Our editorial desk is actively testing new finds.
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {products.map((prod, idx) => (
+            <EditorialProductCard
+              key={prod.asin}
+              product={prod}
+              rank={idx + 1}
+              guideSlug={prod.guideSlug}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

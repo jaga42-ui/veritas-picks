@@ -149,8 +149,18 @@ export default async function HomePage() {
         </div>
 
         {/* SWIPEABLE CAROUSEL */}
-        <div className="flex items-stretch gap-5 overflow-x-auto no-scrollbar pb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
-          {swipeableProducts.map((prod, idx) => (
+        {swipeableProducts.length === 0 ? (
+          <div className="text-center py-12 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)]">
+            <p className="text-base font-editorial text-[var(--text-primary)]">
+              Trending selections are currently being evaluated.
+            </p>
+            <p className="text-xs text-[var(--text-secondary)] mt-2">
+              Check back soon for new curated wishlists.
+            </p>
+          </div>
+        ) : (
+          <div className="flex items-stretch gap-5 overflow-x-auto no-scrollbar pb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
+            {swipeableProducts.map((prod, idx) => (
             <div
               key={idx}
               className="w-[280px] sm:w-[320px] shrink-0 group rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-[var(--accent-lavender)] overflow-hidden shadow-xs hover:shadow-2xl hover:shadow-[var(--accent-lavender)]/15 transition-all duration-300 flex flex-col justify-between"
@@ -201,6 +211,7 @@ export default async function HomePage() {
             </div>
           ))}
         </div>
+        )}
       </section>
 
       {/* 4. EDITORIAL COVER STORY CARD */}
@@ -325,14 +336,25 @@ export default async function HomePage() {
           </div>
 
           <div className="space-y-8">
-            {viralProducts.map((product, idx) => (
-              <EditorialProductCard
-                key={product.asin}
-                product={product}
-                rank={idx + 1}
-                guideSlug={product.guideSlug || "best-college-dorm-essentials"}
-              />
-            ))}
+            {viralProducts.length === 0 ? (
+              <div className="text-center py-16 px-4 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)]">
+                <p className="text-base font-editorial text-[var(--text-primary)]">
+                  No products listed in this section yet.
+                </p>
+                <p className="text-xs text-[var(--text-secondary)] mt-2">
+                  Our editors are currently testing and evaluating new items. Check back soon.
+                </p>
+              </div>
+            ) : (
+              viralProducts.map((product, idx) => (
+                <EditorialProductCard
+                  key={product.asin}
+                  product={product}
+                  rank={idx + 1}
+                  guideSlug={product.guideSlug || "best-college-dorm-essentials"}
+                />
+              ))
+            )}
           </div>
         </div>
       </section>

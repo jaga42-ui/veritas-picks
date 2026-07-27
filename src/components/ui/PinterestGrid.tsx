@@ -23,6 +23,19 @@ export const PinterestGrid: React.FC<PinterestGridProps> = ({
   items,
   columns = 3,
 }) => {
+  if (!items || items.length === 0) {
+    return (
+      <div className="w-full text-center py-16 px-4 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)]">
+        <p className="text-base font-editorial text-[var(--text-primary)]">
+          No editorial guides published in this section yet.
+        </p>
+        <p className="text-xs text-[var(--text-secondary)] mt-2">
+          Our editors are currently curating new selections. Check back soon.
+        </p>
+      </div>
+    );
+  }
+
   const gridClass =
     columns === 4
       ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"

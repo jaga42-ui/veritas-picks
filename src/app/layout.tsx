@@ -1,20 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { AppWrapper } from "@/components/layout/AppWrapper";
 import { getAllGuides } from "@/lib/content";
 import { SearchItem } from "@/components/search/SearchModal";
 
-const jakarta = Plus_Jakarta_Sans({
+const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const editorial = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-editorial",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -151,7 +153,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${jakarta.variable} ${playfair.variable} min-h-screen antialiased bg-[var(--bg-page)] text-[var(--text-primary)] font-sans`}
+        className={`${sans.variable} ${editorial.variable} min-h-screen antialiased bg-[var(--bg-page)] text-[var(--text-primary)] font-sans`}
       >
         <AppWrapper searchItems={searchItems}>{children}</AppWrapper>
       </body>

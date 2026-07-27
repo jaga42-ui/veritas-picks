@@ -13,6 +13,8 @@ import {
   Compass,
   Grid,
   BookOpen,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 interface NavbarProps {
@@ -22,6 +24,17 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleTheme = () => {
+    const nextDark = !isDark;
+    setIsDark(nextDark);
+    if (nextDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
 
   return (
     <>
@@ -111,6 +124,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
                 <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-bold rounded bg-white/50 dark:bg-black/40 text-[var(--text-muted)] border border-[var(--card-border)]">
                   ⌘K
                 </kbd>
+              </button>
+
+              {/* THEME TOGGLE (LIGHT / DARK) */}
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="p-2.5 rounded-full bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:bg-[var(--accent-lavender)] hover:text-white border border-[var(--card-border)] transition-all shadow-xs"
+                aria-label="Toggle light and dark mode"
+                title="Toggle theme"
+              >
+                {isDark ? (
+                  <Sun className="w-4 h-4" />
+                ) : (
+                  <Moon className="w-4 h-4" />
+                )}
               </button>
 
               {/* MOBILE HAMBURGER MENU BUTTON */}

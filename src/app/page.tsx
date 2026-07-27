@@ -60,12 +60,12 @@ export default async function HomePage() {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--accent-pink-light)] text-[var(--accent-pink)] border border-[var(--accent-pink)]/30 text-xs sm:text-sm font-extrabold uppercase tracking-widest shadow-sm">
               <Sparkles className="w-4 h-4 text-[var(--accent-pink)]" />
-              <span>Soft Rosewater &amp; Lavender Edit • Daily Curated Finds</span>
+              <span>Aesop &amp; Kinfolk Inspired • Daily Curated Finds</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[var(--text-primary)] leading-[1.08] font-editorial">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-[var(--text-primary)] leading-[1.08] font-editorial">
               The Art of Everyday{" "}
-              <span className="italic font-light text-[var(--accent-lavender)]">
+              <span className="italic font-normal text-[var(--accent-lavender)]">
                 Discovery.
               </span>
             </h1>

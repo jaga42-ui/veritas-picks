@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-sans, "Inter", -apple-system, sans-serif);
+  --font-editorial: var(--font-editorial, "Cormorant Garamond", "Georgia", serif);
+}
+
 @layer base {
   :root {
     /* AESOP x KINFOLK WARM IVORY & TUSCAN YELLOW-GREEN MINIMAL THEME (Light Mode) */
@@ -31,29 +36,28 @@
     --radius-2xl: 2rem;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      /* OBSIDIAN OLIVE NIGHT (Dark Mode) - DEEP, SOOTHING & SOPHISTICATED */
-      --bg-page: #131412;
-      --bg-secondary: #1B1C1A;
-      --text-primary: #F3F1EA;
-      --text-secondary: #A8A69C;
-      --text-muted: #727169;
-      --card-bg: #181917;
-      --card-border: #2A2B26;
-      --card-hover: #20221E;
-      --accent-pink: #83987B;
-      --accent-lavender: #B5BF5B;
-      --accent-pink-glow: rgba(131, 152, 123, 0.16);
-      --accent-lavender-glow: rgba(181, 191, 91, 0.18);
-      --accent-pink-light: #1E221D;
-      --accent-lavender-light: #24261B;
-      --accent-gold: #D2B872;
-      --accent-beige: #22231F;
-      --accent-green: #83987B;
-      --accent-citron: #B5BF5B;
-      --accent-olive: #83987B;
-    }
+  /* Optional explicit .dark class override only (no automatic prefers-color-scheme override) */
+  .dark {
+    /* OBSIDIAN OLIVE NIGHT - OPTIONAL NIGHT MODE ONLY */
+    --bg-page: #131412;
+    --bg-secondary: #1B1C1A;
+    --text-primary: #F3F1EA;
+    --text-secondary: #A8A69C;
+    --text-muted: #727169;
+    --card-bg: #181917;
+    --card-border: #2A2B26;
+    --card-hover: #20221E;
+    --accent-pink: #83987B;
+    --accent-lavender: #B5BF5B;
+    --accent-pink-glow: rgba(131, 152, 123, 0.16);
+    --accent-lavender-glow: rgba(181, 191, 91, 0.18);
+    --accent-pink-light: #1E221D;
+    --accent-lavender-light: #24261B;
+    --accent-gold: #D2B872;
+    --accent-beige: #22231F;
+    --accent-green: #83987B;
+    --accent-citron: #B5BF5B;
+    --accent-olive: #83987B;
   }
 
   * {
@@ -70,10 +74,10 @@
     overflow-x: hidden;
   }
 
-  /* Editorial Magazine Serif Font Class - Playfair Display / Fashion Serif */
+  /* Editorial Magazine Serif Font Class - Cormorant Garamond / NYT Magazine Serif */
   .font-editorial {
-    font-family: var(--font-editorial, "Georgia", "Playfair Display", serif);
-    font-weight: 700;
+    font-family: var(--font-editorial, "Cormorant Garamond", "Georgia", serif);
+    font-weight: 600;
   }
 }
 

@@ -270,26 +270,6 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* NEW: EDITOR'S LETTER — 01 / AUTUMN & WINTER CURATION (TYPOGRAPHY-FIRST EDITORIAL BLOCK) */}
-      <section className="py-16 sm:py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--card-border)]">
-        <div className="text-center space-y-6">
-          <div className="inline-block text-xs font-extrabold uppercase tracking-[0.25em] text-[var(--accent-pink)]">
-            Editor&apos;s Letter — 01 / Curation Philosophy
-          </div>
-          <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text-primary)] font-editorial leading-snug">
-            &ldquo;Why Quiet Luxury &amp; Scandinavian Simplicity Never Go Out of Style.&rdquo;
-          </h3>
-          <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed max-w-3xl mx-auto font-normal">
-            In an era of fleeting micro-trends and algorithmic clutter, true editorial curation requires restraint. 
-            We spend our days thoughtfully evaluating everyday essentials to isolate the rare few that combine aesthetic longevity, 
-            honest craftsmanship, and functional beauty. These aren&apos;t just products; they are the quiet anchors of a considered life.
-          </p>
-          <div className="pt-2 text-xs font-extrabold uppercase tracking-widest text-[var(--text-muted)]">
-            — The Veritas Picks Editorial Desk
-          </div>
-        </div>
-      </section>
-
       {/* 5. PINTEREST MASONRY DISCOVERY FEED */}
       <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--card-border)]">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
@@ -316,53 +296,6 @@ export default async function HomePage() {
         </div>
 
         <PinterestGrid items={trendingGridItems} columns={3} />
-      </section>
-
-      {/* NEW: MINIMAL NOTES • THE EDITORIAL JOURNAL STORYTELLING BLOCK */}
-      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--card-border)]">
-        <div className="mb-10 text-center sm:text-left">
-          <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[var(--accent-pink)]">
-            Minimal Notes • Editorial Journal
-          </span>
-          <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-editorial">
-            What Makes a Piece Worth Investing In?
-          </h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          <div className="p-6 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] space-y-3">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[var(--accent-lavender)]">
-              01. Interiors
-            </span>
-            <h4 className="text-lg font-bold text-[var(--text-primary)] font-editorial">
-              Warm Natural Lighting &amp; Linen
-            </h4>
-            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-              We favor tactile, breathable fabrics and diffused lighting that create calm, inviting spaces without visual fatigue.
-            </p>
-          </div>
-          <div className="p-6 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] space-y-3">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[var(--accent-lavender)]">
-              02. Wardrobe
-            </span>
-            <h4 className="text-lg font-bold text-[var(--text-primary)] font-editorial">
-              Structured Neutral Tailoring
-            </h4>
-            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-              Timeless silhouettes in oatmeal, ivory, and taupe outlive seasonal cycles and blend seamlessly into any existing capsule wardrobe.
-            </p>
-          </div>
-          <div className="p-6 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] space-y-3">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-[var(--accent-lavender)]">
-              03. Daily Rituals
-            </span>
-            <h4 className="text-lg font-bold text-[var(--text-primary)] font-editorial">
-              Effortless Craftsmanship
-            </h4>
-            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-              Whether it&apos;s a ceramic espresso cup or a weighted linen throw, daily items should feel premium to the touch every morning.
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* 6. EDITORS' CURATED AMAZON ESSENTIALS GRID */}

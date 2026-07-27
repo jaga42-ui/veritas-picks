@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
   return (
     <>
       {/* TOP STICKY LAVENDER GLASS HEADER */}
-      <header className="sticky top-0 z-50 w-full bg-white/85 dark:bg-[#1A1128]/90 backdrop-blur-xl border-b border-[var(--card-border)] transition-all duration-300 shadow-xs">
+      <header className="sticky top-0 z-50 w-full bg-white/85 dark:bg-[#131412]/90 backdrop-blur-xl border-b border-[var(--card-border)] transition-all duration-300 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* LEFT: BRAND & LAVENDER TAG */}
@@ -175,7 +175,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
 
       {/* MOBILE iOS-STYLE STICKY BOTTOM NAVIGATION BAR */}
       <nav
-        className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#1A1128]/95 backdrop-blur-xl border-t border-[var(--card-border)] py-2 px-4 flex items-center justify-around md:hidden shadow-2xl"
+        className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#131412]/95 backdrop-blur-xl border-t border-[var(--card-border)] py-2 px-4 flex items-center justify-around md:hidden shadow-2xl"
         aria-label="Mobile bottom navigation"
       >
         <Link
@@ -197,7 +197,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
         <button
           type="button"
           onClick={onOpenSearch}
-          className="flex flex-col items-center justify-center w-12 h-12 -mt-4 rounded-full bg-gradient-to-tr from-[var(--accent-lavender)] to-[#D98880] text-white shadow-lg active:scale-90 transition-transform"
+          className="flex flex-col items-center justify-center w-12 h-12 -mt-4 rounded-full bg-gradient-to-tr from-[var(--accent-lavender)] to-[#83987B] text-white shadow-lg active:scale-90 transition-transform"
           aria-label="Search"
         >
           <Search className="w-5 h-5" />

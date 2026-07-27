@@ -32,7 +32,7 @@ export const QuickSummary: React.FC<QuickSummaryProps> = ({
       </p>
 
       {topPick && (
-        <div className="bg-white dark:bg-[#121214] p-5 rounded-2xl border border-[var(--card-border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="bg-white dark:bg-[var(--card-bg)] p-5 rounded-2xl border border-[var(--card-border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <span className="text-xs uppercase font-bold tracking-wider text-[var(--text-muted)]">
               Our #1 Recommendation

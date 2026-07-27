@@ -50,7 +50,7 @@ export const NewsletterBox: React.FC<{ compact?: boolean }> = () => {
             />
             <button
               type="submit"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold text-sm transition-all duration-200 shrink-0 shadow-md"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[var(--text-primary)] hover:bg-[var(--accent-lavender)] text-[var(--bg-page)] hover:text-white font-semibold text-sm transition-all duration-200 shrink-0 shadow-md"
             >
               Subscribe
             </button>

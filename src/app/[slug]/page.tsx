@@ -210,7 +210,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       {/* 1000x1500 VERTICAL PINTEREST HERO IMAGE WITH PIN BUTTON */}
       <div className="max-w-3xl mx-auto">
-        <div className="relative w-full h-[480px] sm:h-[700px] rounded-3xl overflow-hidden bg-white dark:bg-[#121214] border border-[var(--card-border)] shadow-xl">
+        <div className="relative w-full h-[480px] sm:h-[700px] rounded-3xl overflow-hidden bg-white dark:bg-[var(--card-bg)] border border-[var(--card-border)] shadow-xl">
           <Image
             src={guide.heroImage}
             alt={guide.title}
@@ -237,7 +237,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       {/* EDITOR'S NOTES & STYLE NOTES CALLOUT BOX */}
       {(guide.editorNotes || guide.styleNotes) && (
-        <div className="max-w-4xl mx-auto p-8 rounded-3xl bg-white dark:bg-[#131315] border border-[var(--card-border)] shadow-sm space-y-4">
+        <div className="max-w-4xl mx-auto p-8 rounded-3xl bg-white dark:bg-[var(--card-bg)] border border-[var(--card-border)] shadow-sm space-y-4">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--text-primary)]">
             <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
             <span>Editor&apos;s Testing Notes &amp; Styling Secrets</span>
@@ -297,7 +297,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             {guide.faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white dark:bg-[#131315] border border-[var(--card-border)] space-y-2"
+                className="p-6 rounded-2xl bg-white dark:bg-[var(--card-bg)] border border-[var(--card-border)] space-y-2"
               >
                 <h3 className="font-bold text-base sm:text-lg text-[var(--text-primary)]">
                   {faq.question}

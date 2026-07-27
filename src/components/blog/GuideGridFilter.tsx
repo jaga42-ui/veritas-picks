@@ -74,7 +74,7 @@ export const GuideGridFilter: React.FC<GuideGridFilterProps> = ({
               href={`/${guide.slug}`}
               className="group flex flex-col rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] overflow-hidden hover:border-[var(--text-muted)]/40 transition-all duration-300 shadow-xs"
             >
-              <div className="relative w-full h-64 overflow-hidden bg-white dark:bg-[#121214]">
+              <div className="relative w-full h-64 overflow-hidden bg-white dark:bg-[var(--card-bg)]">
                 <Image
                   src={guide.heroImage}
                   alt={guide.title}

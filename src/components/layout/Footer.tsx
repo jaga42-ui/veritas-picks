@@ -6,7 +6,7 @@ import { Camera, Bookmark, Rss, ArrowUpRight } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-white dark:bg-[#111111] border-t border-[var(--card-border)] pt-20 pb-16 transition-colors">
+    <footer className="bg-white dark:bg-[#131412] border-t border-[var(--card-border)] pt-20 pb-16 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* TOP EDITORIAL ENDING ROW: BRAND PHILOSOPHY & MANIFESTO */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 justify-between pb-12 border-b border-[var(--card-border)]">

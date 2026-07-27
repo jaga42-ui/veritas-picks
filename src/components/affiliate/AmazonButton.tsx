@@ -29,11 +29,11 @@ export const AmazonButton: React.FC<AmazonButtonProps> = ({
 
   const variants = {
     primary:
-      "bg-[#0071e3] hover:bg-[#0077ed] text-white px-6 py-3.5 text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
+      "bg-[var(--accent-pink)] hover:bg-[#32452B] text-white px-6 py-3.5 text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0",
     secondary:
       "bg-[var(--card-bg)] hover:bg-[var(--card-hover)] text-[var(--text-primary)] border border-[var(--card-border)] px-5 py-3 text-sm",
     minimal:
-      "text-[#0071e3] hover:text-[#0077ed] underline text-sm font-semibold p-0 hover:no-underline",
+      "text-[var(--accent-pink)] hover:text-[var(--text-primary)] underline text-sm font-semibold p-0 hover:no-underline",
   };
 
   return (

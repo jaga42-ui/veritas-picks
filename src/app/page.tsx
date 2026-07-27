@@ -242,7 +242,7 @@ export default async function HomePage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="px-4 py-1.5 rounded-full bg-white/95 dark:bg-[#1a1128]/95 text-[var(--text-primary)] text-xs font-extrabold uppercase tracking-wider shadow-md">
+                  <span className="px-4 py-1.5 rounded-full bg-white/95 dark:bg-[#131412]/95 text-[var(--text-primary)] text-xs font-extrabold uppercase tracking-wider shadow-md">
                     {featuredGuide.categoryName}
                   </span>
                 </div>
@@ -328,7 +328,7 @@ export default async function HomePage() {
 
             <Link
               href="/best-picks"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--accent-lavender)] hover:bg-[#6D34CC] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shrink-0"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--accent-lavender)] hover:bg-[#4E5E24] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shrink-0"
             >
               <span>See Complete Wishlist</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -366,7 +366,7 @@ export default async function HomePage() {
 
       {/* 8. LAVENDER FROSTED NEWSLETTER SIGNUP */}
       <section className="pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-tr from-[var(--bg-secondary)] via-white dark:via-[#1a1128] to-[var(--accent-lavender-light)] border border-[var(--card-border)] p-8 sm:p-12 shadow-md">
+        <div className="rounded-3xl bg-gradient-to-tr from-[var(--bg-secondary)] via-white dark:via-[#131412] to-[var(--accent-lavender-light)] border border-[var(--card-border)] p-8 sm:p-12 shadow-md">
           <NewsletterBox />
         </div>
       </section>

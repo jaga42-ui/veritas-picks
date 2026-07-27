@@ -2,23 +2,28 @@
 
 @layer base {
   :root {
-    /* SOFT ROSEWATER BLUSH & OPAL LAVENDER THEME (Light Mode) - ZERO EYE STRAIN */
-    --bg-page: #faf5f7;
-    --bg-secondary: #f4ebef;
-    --text-primary: #2d2427;
-    --text-secondary: #66595e;
-    --text-muted: #998a90;
-    --card-bg: #ffffff;
-    --card-border: #ebdce2;
-    --card-hover: #fcf6f8;
-    --accent-pink: #cc6e86;
-    --accent-lavender: #ba709c;
-    --accent-pink-glow: rgba(204, 110, 134, 0.16);
-    --accent-lavender-glow: rgba(186, 112, 156, 0.16);
-    --accent-pink-light: #fbeef2;
-    --accent-lavender-light: #f7eff4;
-    --accent-gold: #c2955a;
-    --accent-beige: #f5edef;
+    /* AESOP x KINFOLK WARM IVORY & TUSCAN YELLOW-GREEN MINIMAL THEME (Light Mode) */
+    --bg-page: #FAF8F3;
+    --bg-secondary: #F2EFE7;
+    --text-primary: #171816;
+    --text-secondary: #565954;
+    --text-muted: #82867F;
+    --card-bg: #FFFFFF;
+    --card-border: #E5E1D6;
+    --card-hover: #F6F3EB;
+    /* Primary / Secondary accents mapped to Tuscan Citron Yellow-Green & Botanical Sage */
+    --accent-pink: #42553B;
+    --accent-lavender: #6C7D32;
+    --accent-pink-glow: rgba(66, 85, 59, 0.12);
+    --accent-lavender-glow: rgba(108, 125, 50, 0.15);
+    --accent-pink-light: #EFF1EB;
+    --accent-lavender-light: #F4F5EA;
+    --accent-gold: #AB914D;
+    --accent-beige: #F2EFE7;
+    /* Semantic aliases */
+    --accent-green: #42553B;
+    --accent-citron: #6C7D32;
+    --accent-olive: #42553B;
     --radius-sm: 0.75rem;
     --radius-md: 1rem;
     --radius-lg: 1.25rem;
@@ -28,23 +33,26 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      /* WARM CASHMERE NIGHT (Dark Mode) - SOFT & SOOTHING */
-      --bg-page: #151113;
-      --bg-secondary: #1e181a;
-      --text-primary: #f7eff2;
-      --text-secondary: #c0b4b8;
-      --text-muted: #887a80;
-      --card-bg: #1b1618;
-      --card-border: #2e2528;
-      --card-hover: #241d20;
-      --accent-pink: #df8ca1;
-      --accent-lavender: #d194b8;
-      --accent-pink-glow: rgba(223, 140, 161, 0.18);
-      --accent-lavender-glow: rgba(209, 148, 184, 0.18);
-      --accent-pink-light: #2a1b20;
-      --accent-lavender-light: #281a24;
-      --accent-gold: #d4a96e;
-      --accent-beige: #241c1f;
+      /* OBSIDIAN OLIVE NIGHT (Dark Mode) - DEEP, SOOTHING & SOPHISTICATED */
+      --bg-page: #131412;
+      --bg-secondary: #1B1C1A;
+      --text-primary: #F3F1EA;
+      --text-secondary: #A8A69C;
+      --text-muted: #727169;
+      --card-bg: #181917;
+      --card-border: #2A2B26;
+      --card-hover: #20221E;
+      --accent-pink: #83987B;
+      --accent-lavender: #B5BF5B;
+      --accent-pink-glow: rgba(131, 152, 123, 0.16);
+      --accent-lavender-glow: rgba(181, 191, 91, 0.18);
+      --accent-pink-light: #1E221D;
+      --accent-lavender-light: #24261B;
+      --accent-gold: #D2B872;
+      --accent-beige: #22231F;
+      --accent-green: #83987B;
+      --accent-citron: #B5BF5B;
+      --accent-olive: #83987B;
     }
   }
 
@@ -69,21 +77,21 @@
   }
 }
 
-/* SOFT DREAMY BLUSH & LAVENDER MESH HERO GLOW - SOOTHING ON EYES */
+/* WARM ARCHITECTURAL IVORY & YELLOW-GREEN EDITORIAL HERO ATMOSPHERE - ZERO AI FEEL */
 .lavender-mesh-bg {
   background: radial-gradient(
       circle at 20% 10%,
-      rgba(204, 110, 134, 0.08) 0%,
-      transparent 50%
+      rgba(108, 125, 50, 0.07) 0%,
+      transparent 55%
     ),
     radial-gradient(
-      circle at 80% 40%,
-      rgba(186, 112, 156, 0.09) 0%,
-      transparent 50%
+      circle at 85% 35%,
+      rgba(66, 85, 59, 0.08) 0%,
+      transparent 55%
     ),
     radial-gradient(
       circle at 50% 90%,
-      rgba(194, 149, 90, 0.06) 0%,
+      rgba(171, 145, 77, 0.04) 0%,
       transparent 60%
     );
 }

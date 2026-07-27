@@ -172,7 +172,7 @@ export const EditorialProductCard: React.FC<EditorialProductCardProps> = ({
                 productName={product.name}
                 overrideUrl={product.amazonUrlOverride}
                 customText="Check Price on Amazon"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[var(--accent-pink)] hover:bg-[#b85c74] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-[var(--accent-pink)]/25 tactile-btn text-center block sm:inline-block"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[var(--accent-pink)] hover:bg-[#32452B] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-[var(--accent-pink)]/25 tactile-btn text-center block sm:inline-block"
               />
             </div>
           </div>

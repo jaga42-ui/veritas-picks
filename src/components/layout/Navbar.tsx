@@ -48,13 +48,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
             <nav className="hidden md:flex items-center gap-8">
               <Link
                 href="/buying-guides"
-                className="text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--accent-lavender)] transition-colors"
+                className="text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--accent-pink)] transition-colors nav-link-underline py-1"
               >
                 Editorial Guides
               </Link>
               <Link
                 href="/best-picks"
-                className="text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--accent-lavender)] transition-colors"
+                className="text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--accent-pink)] transition-colors nav-link-underline py-1"
               >
                 Curated Wishlists
               </Link>
@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
               >
                 <button
                   type="button"
-                  className="flex items-center gap-1 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--accent-lavender)] transition-colors py-2"
+                  className="flex items-center gap-1 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--accent-pink)] transition-colors py-1 nav-link-underline"
                 >
                   <span>Categories</span>
                   <ChevronDown className="w-3.5 h-3.5" />

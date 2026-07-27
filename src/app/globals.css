@@ -115,20 +115,67 @@
   }
 }
 
-/* LUXURY EDITORIAL CARDS WITH SOFT BLUSH GLOW */
+/* LUXURY EDITORIAL CARDS WITH KINFOLK / AESOP PRECISE EASING (180-240ms) */
 .editorial-card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-xl);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 18px -8px rgba(204, 110, 134, 0.05);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s ease,
+    background-color 0.22s ease;
+  box-shadow: 0 4px 18px -8px rgba(204, 110, 134, 0.04);
 }
 
 .editorial-card:hover {
   background-color: var(--card-hover);
   border-color: var(--accent-pink);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 16px 36px -12px var(--accent-pink-glow);
+}
+
+/* EDITORIAL IMAGE MICRO-ZOOM (1.03x) */
+.editorial-img {
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.editorial-card:hover .editorial-img,
+.group:hover .editorial-img {
+  transform: scale(1.03);
+}
+
+/* TACTILE BUTTONS (AESOP / APPLE SUBTLE RAISE & GLOW) */
+.tactile-btn {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+.tactile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -6px rgba(204, 110, 134, 0.25);
+}
+.tactile-btn:active {
+  transform: translateY(0);
+}
+
+/* LUXURY NAV UNDERLINE ANIMATION */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-pink);
+  transform-origin: bottom right;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* HIDE SCROLLBAR FOR MOBILE HORIZONTAL SWIPING */

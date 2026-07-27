@@ -42,8 +42,20 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] transition-colors">
-      {/* 1. LAVENDER MESH HERO BANNER */}
+      {/* 1. LAVENDER MESH HERO BANNER WITH SUBTLE SCANDINAVIAN ATMOSPHERE */}
       <section className="relative overflow-hidden pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-[var(--card-border)] lavender-mesh-bg">
+        {/* Extremely subtle editorial Scandinavian interior texture (6% opacity) */}
+        <div className="absolute inset-0 z-0 opacity-[0.06] pointer-events-none mix-blend-multiply dark:mix-blend-overlay">
+          <Image
+            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80"
+            alt="Scandinavian Minimal Interior Atmosphere"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--accent-pink-light)] text-[var(--accent-pink)] border border-[var(--accent-pink)]/30 text-xs sm:text-sm font-extrabold uppercase tracking-widest shadow-sm">
@@ -60,21 +72,21 @@ export default async function HomePage() {
 
             <p className="text-base sm:text-xl text-[var(--text-secondary)] leading-relaxed max-w-2xl mx-auto font-normal">
               Curated Scandinavian minimalism, old-money wardrobe staples, and aesthetic
-              home decor that look like luxury—independently tested and styled by our
-              editors.
+              home decor that look like luxury—thoughtfully evaluated, researched, and
+              styled by our editorial team.
             </p>
 
-            {/* QUICK EXPLORE CTAs */}
+            {/* QUICK EXPLORE CTAs WITH AESOP TACTILE FEEL */}
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <Link
                 href="/best-picks"
-                className="px-8 py-3.5 rounded-full bg-[var(--accent-pink)] hover:bg-[#b85c74] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-[var(--accent-pink)]/25 hover:shadow-xl hover:shadow-[var(--accent-pink)]/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="px-8 py-3.5 rounded-full bg-[var(--accent-pink)] hover:bg-[#b85c74] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-[var(--accent-pink)]/25 tactile-btn"
               >
                 Explore Curated Wishlists
               </Link>
               <Link
                 href="/buying-guides"
-                className="px-8 py-3.5 rounded-full bg-[var(--card-bg)] hover:bg-[var(--card-hover)] text-[var(--text-primary)] border border-[var(--card-border)] hover:border-[var(--accent-pink)]/50 font-bold text-sm uppercase tracking-wider transition-all"
+                className="px-8 py-3.5 rounded-full bg-[var(--card-bg)] hover:bg-[var(--card-hover)] text-[var(--text-primary)] border border-[var(--card-border)] hover:border-[var(--accent-pink)]/50 font-bold text-sm uppercase tracking-wider tactile-btn"
               >
                 Browse Editorial Guides
               </Link>
@@ -258,6 +270,26 @@ export default async function HomePage() {
         </section>
       )}
 
+      {/* NEW: EDITOR'S LETTER — 01 / AUTUMN & WINTER CURATION (TYPOGRAPHY-FIRST EDITORIAL BLOCK) */}
+      <section className="py-16 sm:py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--card-border)]">
+        <div className="text-center space-y-6">
+          <div className="inline-block text-xs font-extrabold uppercase tracking-[0.25em] text-[var(--accent-pink)]">
+            Editor&apos;s Letter — 01 / Curation Philosophy
+          </div>
+          <h3 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text-primary)] font-editorial leading-snug">
+            &ldquo;Why Quiet Luxury &amp; Scandinavian Simplicity Never Go Out of Style.&rdquo;
+          </h3>
+          <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed max-w-3xl mx-auto font-normal">
+            In an era of fleeting micro-trends and algorithmic clutter, true editorial curation requires restraint. 
+            We spend our days thoughtfully evaluating everyday essentials to isolate the rare few that combine aesthetic longevity, 
+            honest craftsmanship, and functional beauty. These aren&apos;t just products; they are the quiet anchors of a considered life.
+          </p>
+          <div className="pt-2 text-xs font-extrabold uppercase tracking-widest text-[var(--text-muted)]">
+            — The Veritas Picks Editorial Desk
+          </div>
+        </div>
+      </section>
+
       {/* 5. PINTEREST MASONRY DISCOVERY FEED */}
       <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--card-border)]">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
@@ -276,7 +308,7 @@ export default async function HomePage() {
 
           <Link
             href="/buying-guides"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--card-bg)] hover:bg-[var(--accent-lavender)] hover:text-white text-[var(--text-primary)] font-bold text-xs uppercase tracking-wider border border-[var(--card-border)] transition-all shadow-xs shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--card-bg)] hover:bg-[var(--accent-lavender)] hover:text-white text-[var(--text-primary)] font-bold text-xs uppercase tracking-wider border border-[var(--card-border)] transition-all shadow-xs shrink-0 tactile-btn"
           >
             <span>View All Editorial Guides</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -286,19 +318,66 @@ export default async function HomePage() {
         <PinterestGrid items={trendingGridItems} columns={3} />
       </section>
 
+      {/* NEW: MINIMAL NOTES • THE EDITORIAL JOURNAL STORYTELLING BLOCK */}
+      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[var(--card-border)]">
+        <div className="mb-10 text-center sm:text-left">
+          <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-[var(--accent-pink)]">
+            Minimal Notes • Editorial Journal
+          </span>
+          <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] font-editorial">
+            What Makes a Piece Worth Investing In?
+          </h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <div className="p-6 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] space-y-3">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[var(--accent-lavender)]">
+              01. Interiors
+            </span>
+            <h4 className="text-lg font-bold text-[var(--text-primary)] font-editorial">
+              Warm Natural Lighting &amp; Linen
+            </h4>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              We favor tactile, breathable fabrics and diffused lighting that create calm, inviting spaces without visual fatigue.
+            </p>
+          </div>
+          <div className="p-6 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] space-y-3">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[var(--accent-lavender)]">
+              02. Wardrobe
+            </span>
+            <h4 className="text-lg font-bold text-[var(--text-primary)] font-editorial">
+              Structured Neutral Tailoring
+            </h4>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Timeless silhouettes in oatmeal, ivory, and taupe outlive seasonal cycles and blend seamlessly into any existing capsule wardrobe.
+            </p>
+          </div>
+          <div className="p-6 rounded-3xl bg-[var(--card-bg)] border border-[var(--card-border)] space-y-3">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[var(--accent-lavender)]">
+              03. Daily Rituals
+            </span>
+            <h4 className="text-lg font-bold text-[var(--text-primary)] font-editorial">
+              Effortless Craftsmanship
+            </h4>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Whether it&apos;s a ceramic espresso cup or a weighted linen throw, daily items should feel premium to the touch every morning.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 6. EDITORS' CURATED AMAZON ESSENTIALS GRID */}
       <section className="py-16 sm:py-24 bg-[var(--bg-secondary)] border-t border-b border-[var(--card-border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-2">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[var(--accent-lavender)]">
-                Tested &amp; Recommended
+                Curated &amp; Evaluated
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] font-editorial">
                 Shop The Editor&apos;s Desk.
               </h2>
               <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-xl">
-                The exact luxury-looking Amazon finds our editors rely on daily—from
+                The exact luxury-looking Amazon finds thoughtfully evaluated by our editors—from
                 waffle-weave bedding to TSA biometric safes.
               </p>
             </div>

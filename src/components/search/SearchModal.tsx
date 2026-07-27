@@ -20,12 +20,27 @@ interface SearchModalProps {
   items: SearchItem[];
 }
 
+const PLACEHOLDERS = [
+  "Search Korean skincare...",
+  "Search apartment décor...",
+  "Search capsule wardrobe...",
+  "Search Pinterest trends...",
+];
+
 export const SearchModal: React.FC<SearchModalProps> = ({
   isOpen,
   onClose,
   items,
 }) => {
   const [query, setQuery] = useState("");
+  const [placeholderIdx, setPlaceholderIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPlaceholderIdx((prev) => (prev + 1) % PLACEHOLDERS.length);
+    }, 3200);
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -53,18 +68,18 @@ export const SearchModal: React.FC<SearchModalProps> = ({
     : items.slice(0, 6);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4 bg-black/50 backdrop-blur-xs">
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4 bg-black/50 backdrop-blur-sm">
       <div className="w-full max-w-2xl rounded-3xl bg-[var(--bg-page)] border border-[var(--card-border)] shadow-2xl overflow-hidden animate-in fade-in duration-200">
-        {/* Search Header Input */}
-        <div className="p-4 border-b border-[var(--card-border)] flex items-center gap-3">
-          <Search className="w-5 h-5 text-[var(--text-muted)] shrink-0" />
+        {/* Spotlight Search Header Input */}
+        <div className="p-4 border-b border-[var(--card-border)] flex items-center gap-3 focus-within:ring-2 focus-within:ring-[var(--accent-pink)]/40 focus-within:bg-[var(--card-bg)] transition-all duration-200">
+          <Search className="w-5 h-5 text-[var(--accent-pink)] shrink-0 animate-pulse" />
           <input
             type="text"
             autoFocus
-            placeholder="Search buying guides, categories, or top products..."
+            placeholder={PLACEHOLDERS[placeholderIdx]}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full bg-transparent text-[var(--text-primary)] placeholder-[var(--text-muted)] text-base focus:outline-none"
+            className="w-full bg-transparent text-[var(--text-primary)] placeholder-[var(--text-muted)] text-base focus:outline-none transition-all duration-200"
           />
           {query && (
             <button

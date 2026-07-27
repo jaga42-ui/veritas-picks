@@ -28,7 +28,7 @@ export const EditorialProductCard: React.FC<EditorialProductCardProps> = ({
   });
 
   return (
-    <article className="group editorial-card overflow-hidden bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-[var(--accent-lavender)]/70 rounded-3xl p-5 sm:p-8 space-y-6 shadow-sm hover:shadow-2xl hover:shadow-[var(--accent-lavender)]/15 transition-all duration-300">
+    <article className="group editorial-card overflow-hidden bg-[var(--card-bg)] border border-[var(--card-border)] rounded-3xl p-5 sm:p-8 space-y-6">
       {/* HEADER WITH BADGE & RANK */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
@@ -71,7 +71,7 @@ export const EditorialProductCard: React.FC<EditorialProductCardProps> = ({
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, 450px"
-            className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+            className="object-cover editorial-img"
             {...pinAttrs}
           />
           <PinterestSaveButton
@@ -100,7 +100,7 @@ export const EditorialProductCard: React.FC<EditorialProductCardProps> = ({
             <div className="space-y-3 pt-2">
               {product.whyWeLoveIt && (
                 <div className="p-4 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--card-border)] space-y-1.5">
-                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--accent-lavender)] block">
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[var(--accent-pink)] block">
                     Why We Love It
                   </span>
                   <p className="text-xs sm:text-sm text-[var(--text-primary)] leading-relaxed">
@@ -172,7 +172,7 @@ export const EditorialProductCard: React.FC<EditorialProductCardProps> = ({
                 productName={product.name}
                 overrideUrl={product.amazonUrlOverride}
                 customText="Check Price on Amazon"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[var(--accent-pink)] hover:bg-[#b85c74] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-[var(--accent-pink)]/25 hover:shadow-xl hover:shadow-[var(--accent-pink)]/40 transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-center block sm:inline-block"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[var(--accent-pink)] hover:bg-[#b85c74] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-[var(--accent-pink)]/25 tactile-btn text-center block sm:inline-block"
               />
             </div>
           </div>

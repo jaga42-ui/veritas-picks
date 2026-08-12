@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-labelledby="t d">
+  <title id="t">VERITAS PICKS — Reviews that earn the click.</title>
+  <desc id="d">MDX-driven editorial reviews with comparison tables and SEO plumbing. Built with Next.js, TypeScript, Tailwind, MDX, Framer Motion.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12100B"/>
+      <stop offset=".6" stop-color="#241E12"/>
+      <stop offset="1" stop-color="#12100B"/>
+    </linearGradient>
+    <linearGradient id="wash" gradientUnits="userSpaceOnUse" x1="1200" y1="0" x2="680" y2="340">
+      <stop offset="0" stop-color="#C8A45C" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#C8A45C" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rule" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="210" y2="0">
+      <stop offset="0" stop-color="#C8A45C"/>
+      <stop offset="1" stop-color="#E8CE96"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0v28" fill="none" stroke="#fff" stroke-opacity=".05"/>
+    </pattern>
+    <clipPath id="clip"><rect width="1200" height="340" rx="18"/></clipPath>
+  </defs>
+
+  <style>
+    .rise { animation: rise .8s cubic-bezier(.2,.7,.3,1) backwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+    .rule { stroke-dasharray: 150; animation: draw 1s cubic-bezier(.4,0,.2,1) .35s backwards; }
+    @keyframes draw { from { stroke-dashoffset: 150; } }
+    /* Opacity only — a CSS transform here would override the translate
+       attribute on the same element and rip the glyph out of position. */
+    .pulse { animation: pulse 3.2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity:.34; } 50% { opacity:.62; } }
+    .ring { animation: ring 3.2s ease-out infinite; transform-origin: 1010px 150px; }
+    @keyframes ring { 0% { opacity:.5; transform: scale(.7); } 100% { opacity:0; transform: scale(1.5); } }
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .rule, .pulse, .ring { animation: none; }
+    }
+  </style>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)"/>
+    <rect width="1200" height="340" fill="url(#wash)"/>
+    <circle class="ring" cx="1010" cy="150" r="120" fill="none" stroke="#C8A45C" stroke-width="1.5"/>
+    <g class="pulse" transform="translate(1010,150)">
+      <g transform="translate(-32,-32)">
+        <path d="M32 6l8 16.6 18.2 2.6-13.2 12.8 3.2 18.1L32 47.6 15.8 56.1 19 38 5.8 25.2 24 22.6z" fill="none" stroke="#E8CE96" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="339" rx="18" fill="none" stroke="#C8A45C" stroke-opacity=".35"/>
+
+  <g class="rise">
+    <text x="60" y="118" font-family="Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', sans-serif" font-size="62" letter-spacing="1.5" fill="#fff">VERITAS PICKS</text>
+  </g>
+  <line class="rule" x1="60" y1="142" x2="210" y2="142" stroke="url(#rule)" stroke-width="3"/>
+
+  <g class="rise" style="animation-delay:.15s">
+    <text x="60" y="186" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#E8CE96">Reviews that earn the click.</text>
+    <text x="60" y="218" font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Inter, Arial, sans-serif" font-size="16" fill="#fff" fill-opacity=".62">MDX-driven editorial reviews with comparison tables and SEO plumbing.</text>
+  </g>
+
+    <g class="rise" style="animation-delay:0.50s">
+      <rect x="60" y="258" width="85" height="32" rx="8" fill="#fff" fill-opacity=".05" stroke="#fff" stroke-opacity=".14"/>
+      <text x="102.5" y="279" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#fff" fill-opacity=".85">Next.js</text>
+    </g>
+    <g class="rise" style="animation-delay:0.56s">
+      <rect x="154" y="258" width="108" height="32" rx="8" fill="#fff" fill-opacity=".05" stroke="#fff" stroke-opacity=".14"/>
+      <text x="208" y="279" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#fff" fill-opacity=".85">TypeScript</text>
+    </g>
+    <g class="rise" style="animation-delay:0.62s">
+      <rect x="271" y="258" width="92" height="32" rx="8" fill="#fff" fill-opacity=".05" stroke="#fff" stroke-opacity=".14"/>
+      <text x="317" y="279" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#fff" fill-opacity=".85">Tailwind</text>
+    </g>
+    <g class="rise" style="animation-delay:0.68s">
+      <rect x="372" y="258" width="53" height="32" rx="8" fill="#fff" fill-opacity=".05" stroke="#fff" stroke-opacity=".14"/>
+      <text x="398.5" y="279" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#fff" fill-opacity=".85">MDX</text>
+    </g>
+    <g class="rise" style="animation-delay:0.74s">
+      <rect x="434" y="258" width="131" height="32" rx="8" fill="#fff" fill-opacity=".05" stroke="#fff" stroke-opacity=".14"/>
+      <text x="499.5" y="279" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" fill="#fff" fill-opacity=".85">Framer Motion</text>
+    </g>
+</svg>

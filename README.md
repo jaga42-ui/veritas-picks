@@ -105,4 +105,4 @@ comparison table open is the one that sells this project._
 
 ## Licence
 
-No licence file yet. Until one is added, default copyright applies.
+[MIT](LICENSE) © Guruprasad Jena

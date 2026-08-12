@@ -8,6 +8,10 @@
   <img alt="Framer Motion" src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white">
 </p>
 
+<p align="center">
+  <a href="https://veritas-picks.vercel.app"><img alt="Live demo" src="https://img.shields.io/badge/live_demo-veritas--picks.vercel.app-0B7285?style=for-the-badge&logo=vercel&logoColor=white"></a>
+</p>
+
 An affiliate review site built the way a publisher would build it: content is files, not
 rows in a CMS; every buying guide is an MDX document whose frontmatter drives the
 product cards, comparison tables and structured metadata on the page.
